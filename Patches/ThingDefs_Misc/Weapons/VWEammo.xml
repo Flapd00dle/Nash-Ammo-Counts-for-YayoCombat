@@ -53,7 +53,7 @@
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName = "VWE_Gun_LeverActionRifle"]</xpath>
 				<value>
-					<li>ammo_industrial/15/1</li>
+					<li>ammo_industrial/18/1</li>
 				</value>
 			</li>
 			<!-- Light SMG -->
