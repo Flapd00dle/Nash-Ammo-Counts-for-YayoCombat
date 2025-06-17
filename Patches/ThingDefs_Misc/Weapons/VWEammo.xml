@@ -33,13 +33,6 @@
 					</weaponTags>
 				</value>
 			</li>
-			<!-- Flamethrower -->
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName = "VWE_Gun_Flamethrower"]/weaponTags</xpath>
-				<value>
-					<li>ammo_industrial_fire/40/1</li>
-				</value>
-			</li>
 			<!-- Semi-Automatic Rifle -->
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName = "VWE_Gun_SemiAutomaticRifle"]/weaponTags</xpath>
