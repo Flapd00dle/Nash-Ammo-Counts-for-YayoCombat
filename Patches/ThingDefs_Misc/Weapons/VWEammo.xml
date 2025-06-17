@@ -33,7 +33,7 @@
 					</weaponTags>
 				</value>
 			</li>
-			<!-- FlameThrower -->
+			<!-- Flamethrower -->
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName = "VWE_Gun_Flamethrower"]/weaponTags</xpath>
 				<value>
