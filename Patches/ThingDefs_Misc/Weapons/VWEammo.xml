@@ -28,14 +28,18 @@
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName = "VWE_Gun_GrenadeLauncher"]</xpath>
 				<value>
-					<li>yy_ammo_industrial_fire/6/1</li>
+					<weaponTags>
+						<li>ammo_industrial_fire/6/1</li>
+					</weaponTags>
 				</value>
 			</li>
 			<!-- Flamethrower -->
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName = "VWE_Gun_Flamethrower"]</xpath>
 				<value>
-					<li>yy_ammo_industrial_fire/100/1</li>
+					<weaponTags>
+						<li>ammo_industrial_fire/100/1</li>
+					</weaponTags>
 				</value>
 			</li>
 			<!-- Semi-Automatic Rifle -->
