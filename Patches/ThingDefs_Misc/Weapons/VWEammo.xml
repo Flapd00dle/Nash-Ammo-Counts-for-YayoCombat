@@ -2,7 +2,7 @@
 <Patch>
 	<Operation Class="PatchOperationSequence">
 		<operations>
-			<!-- Adding xml for magazine sizes and ammo costs for balance for Vanilla Weapons Expanded-->
+			<!-- Adding xml for magazine sizes and ammo costs for balance-->
 			<!-- Hand Cannon -->
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName = "VWE_Gun_HandCannon"]/weaponTags</xpath>
@@ -12,34 +12,36 @@
 			</li>
 			<!-- Combat Handgun -->
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName = "VWE_Gun_CombatHandgun"]/weaponTags</xpath>
-	                        <value>
-		                        <li>ammo_industrial/12/1</li>
-		                </value>
+				<xpath>Defs/ThingDef[defName = "VWE_CombatHandgun"]/weaponTags</xpath>
+				<value>
+					<li>ammo_industrial/12/1</li>
+				</value>
 			</li>
 			<!-- Sawed-Off Shotgun -->
-	                <li Class="PatchOperationAdd">
-	                        <xpath>Defs/ThingDef[defName = "VWE_Gun_SawedOffShotgun"]/weaponTags</xpath>
-	                        <value>
-					<li>ammo_industrial/2/1</li>
-			        </value>
-		        </li>
-	                <!-- Grenade Launcher -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName = "VWE_SawedOffShotgun"]/weaponTags</xpath>
+				<value>
+					<li>ammo_industrial/3/1</li>
+				</value>
+			</li>
+			<!-- Grenade Launcher -->
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName = "VWE_Gun_GrenadeLauncher"]</xpath>
 				<value>
-					<li>ammo_industrial_fire/6/1</li>
-		                </value>
+					<weaponTags>
+						<li>ammo_industrial_fire/6/1</li>
+					</weaponTags>
+				</value>
 			</li>
-			<!-- Flamethrower -->
+			<!-- FlameThrower -->
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName = "VWE_Gun_Flamethrower"]/weaponTags</xpath>
 				<value>
-					<li>ammo_industrial_fire/20/1</li>
+					<li>ammo_industrial_fire/40/1</li>
 				</value>
 			</li>
 			<!-- Semi-Automatic Rifle -->
-	                <li Class="PatchOperationAdd">
+			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName = "VWE_Gun_SemiAutomaticRifle"]/weaponTags</xpath>
 				<value>
 					<li>ammo_industrial/15/1</li>
@@ -49,27 +51,44 @@
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName = "VWE_Gun_LeverActionRifle"]</xpath>
 				<value>
-					<li>ammo_industrial/12/1</li>
+					<weaponTags>
+						<!-- The favored gun of cowboys and bandits alike. -->
+						<li>ammo_industrial/16/1</li>
+					</weaponTags>
 				</value>
 			</li>
 			<!-- Light SMG -->
-		        <li Class="PatchOperationAdd">
+			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName = "VWE_Gun_LightSMG"]/weaponTags</xpath>
-	                        <value>
+				<value>
+					<li>ammo_industrial/40/1</li>
+				</value>
+			</li>
+			<!-- SMG -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName = "VWE_Gun_SMG"]/weaponTags</xpath>
+				<value>
 					<li>ammo_industrial/30/1</li>
-			        </value>
+				</value>
 			</li>
 			<!-- HMG -->
-		  	<li Class="PatchOperationAdd">
+			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName = "VWE_Gun_HMG"]/weaponTags</xpath>
 				<value>
-					<li>ammo_industrial/100/1</li>
+					<li>ammo_industrial/60/1</li>
+				</value>
+			</li>
+			<!-- LMG -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName = "Gun_LMG"]/weaponTags</xpath>
+				<value>
+					<li>ammo_industrial/47/1</li>
 				</value>
 			</li>
 			<!-- Service Rifle -->
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName = "VWE_Gun_ServiceRifle"]/weaponTags</xpath>
-			  	<value>
+				<value>
 					<li>ammo_industrial/30/1</li>
 				</value>
 			</li>
@@ -84,21 +103,21 @@
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName = "VWE_Gun_Carbine"]/weaponTags</xpath>
 				<value>
-					<li>ammo_industrial/20/1</li>
+					<li>ammo_industrial/35/1</li>
 				</value>
 			</li>
 			<!-- Marksman Rifle -->
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName = "VWE_Gun_MarksmanRifle"]/weaponTags</xpath>
 				<value>
-					<li>ammo_industrial/5/1</li>
+					<li>ammo_industrial/12/1</li>
 				</value>
 			</li>
 			<!-- Anti-Material Rifle -->
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName = "VWE_Gun_AntiMaterialRifle"]/weaponTags</xpath>
 				<value>
-					<li>ammo_industrial/5/1</li>
+					<li>ammo_industrial/8/1</li>
 				</value>
 			</li>
 
@@ -118,40 +137,70 @@
 				</value>
 			</li>
 
+			<!-- Medieval -->
+			<!-- Crossbow -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName = "VWE_Bow_Crossbow"]/weaponTags</xpath>
+				<value>
+					<li>ammo_primitive/15/1</li>
+				</value>
+			</li>
+			<!-- Musket -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName = "VWE_Gun_Musket"]/weaponTags</xpath>
+				<value>
+					<li>ammo_primitive/20/1</li>
+				</value>
+			</li>
+			<!-- Flintlock -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName = "VWE_Gun_Flintlock"]/weaponTags</xpath>
+				<value>
+					<li>ammo_primitive/20/1</li>
+				</value>
+			</li>
+			<!-- Throwing Knives -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName = "VWE_Throwing_Knives"]/weaponTags</xpath>
+				<value>
+					<li>ammo_primitive/30/1</li>
+				</value>
+			</li>
+
 			<!-- Spacer -->
 			<!-- Charge Pistol -->
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName = "VWE_Gun_ChargePistol"]/weaponTags</xpath>
 				<value>
-					<li>ammo_spacer/15/1</li>
+					<li>ammo_spacer/30/1</li>
 				</value>
 			</li>
 			<!-- Charge Shotgun -->
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName = "VWE_Gun_ChargeShotgun"]/weaponTags</xpath>
 				<value>
-					<li>ammo_spacer/10/1</li>
+					<li>ammo_spacer/12/1</li>
 				</value>
 			</li>
 			<!-- Charge SMG -->
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName = "VWE_Gun_ChargeSMG"]/weaponTags</xpath>
 				<value>
-					<li>ammo_spacer/35/1</li>
+					<li>ammo_spacer/40/1</li>
 				</value>
 			</li>
 			<!-- Charge LMG -->
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName = "VWE_Gun_ChargeLMG"]/weaponTags</xpath>
 				<value>
-					<li>ammo_spacer/60/1</li>
+					<li>ammo_spacer/55/1</li>
 				</value>
 			</li>
 			<!-- Charge Sniper Rifle -->
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName = "VWE_Gun_ChargeSniperRifle"]/weaponTags</xpath>
 				<value>
-					<li>ammo_spacer/7/1</li>
+					<li>ammo_spacer/15/1</li>
 				</value>
 			</li>
 			<!-- Charge Minigun -->
